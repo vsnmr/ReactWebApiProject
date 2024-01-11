@@ -2,9 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-
+import UpdateTime from './TimeUpdate';
+import ClockTime from './DigitalClockTime';
 import reportWebVitals from './reportWebVitals';
-
+import ColorChange from './ChangeColor';
 // // challenge #1 Movies List
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
@@ -25,9 +26,11 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<>
-<App/>
+    <ColorChange/>
 
-</>
+    <App />
+
+    <ClockTime /></>
 );
 //ReactDOM.render(<App/>,document.getElementById('root'));
 
@@ -36,6 +39,5 @@ root.render(<>
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 
 reportWebVitals();
-
 
 

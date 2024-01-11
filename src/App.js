@@ -1,25 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
+import EmpCrud from './EmployeeCrud';
+import EmpDetailsList from './EmpDetailsList';
+import EmpCreate from './EmpCreate';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Crud from './Crud'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <h1>Crud operations</h1>
+
+    <Crud name="Employee"/>
+      {/* <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<EmpDetailsList />}/>
+          <Route path='/employeeCreate' element={<EmpCreate />}/>
+          <Route path='/employeeEdit' element={<EmpEdit />}/>
+
+         
+        </Routes>
+
+      </BrowserRouter> */}
+
     </div>
   );
+
 }
 
 export default App;

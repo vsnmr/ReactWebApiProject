@@ -1,0 +1,22 @@
+import React from "react";
+function App() {
+    var wishes = '';
+    var currentTime = new Date()
+    var cTime = currentTime.getHours();
+    var cssStyles = {};
+    //if 1 am to 11 am then ood morning
+    if (cTime >= 1 && cTime < 12) {
+        wishes = "Good Morning";
+        cssStyles.color = "green";
+    }
+    else if (cTime >= 12 && cTime < 18) {
+        wishes = "Good Afternoon";
+        cssStyles.color = "yellow";
+    }
+    else {
+        wishes = "Good Evening";
+        cssStyles.color = "black";
+    }
+    return (<><h1 className='heading'>Hello Sir,<span style={cssStyles}> {wishes}</span></h1></>);
+}
+export default App;
